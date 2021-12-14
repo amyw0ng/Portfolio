@@ -1,4 +1,4 @@
-# Juno College DA Bootcamp - Project 1
+# Retention and Win-Streaks in Mobile Game App
 
 <p align="center"><img width="800" height="" src="https://miro.medium.com/max/3200/1*rB-3Q2k7o9qk8IyAzx-TRA.gif"></p>
 
@@ -71,7 +71,7 @@ This `fractional_retention` was then used with the `CASE ... WHEN` to calculate 
 All of the above allowed us to explore the 30-day rolling retention for the game over the past year.
 
 ### 30-Day Rolling Retention Analysis
-Google sheets reference: https://docs.google.com/spreadsheets/d/1FC4AcXgUb45kUQqx8Psmrh5OvheLU0R1RB4KC9JC36I/edit?usp=sharing
+[Google sheets reference link.](https://docs.google.com/spreadsheets/d/1FC4AcXgUb45kUQqx8Psmrh5OvheLU0R1RB4KC9JC36I/edit?usp=sharing)
 
 <p align="center"><img width="" height="" src="https://github.com/amyw0ng/Juno-College-DA-Bootcamp---Project-1/blob/main/Graphs/Percent%20Retention%20and%20Growth%20Rate%20of%20Retention%20over%20the%20Year%20Graph.png?raw=true"></p>
 
@@ -195,7 +195,7 @@ SELECT
 ```
 
 ### Win-Streak Analysis
-Google sheets reference: https://docs.google.com/spreadsheets/d/1WXCbHQoklAE41vEg8-a904hEN9RkidIuIRlBNWIxuXc/edit?usp=sharing
+[Google sheets reference link.](https://docs.google.com/spreadsheets/d/1WXCbHQoklAE41vEg8-a904hEN9RkidIuIRlBNWIxuXc/edit?usp=sharing)
 
 <p align="center"><img width="" height="" src="https://github.com/amyw0ng/Juno-College-DA-Bootcamp---Project-1/blob/main/Graphs/Average%20Highest%20Win-Streak%20Graph.png?raw=true"></p>
 

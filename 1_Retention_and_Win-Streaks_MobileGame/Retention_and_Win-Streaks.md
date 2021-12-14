@@ -1,4 +1,4 @@
-# Retention and Win-Streaks in Mobile Game App
+# <p align="center">Retention and Win-Streaks in Mobile Game App</p>
 
 <p align="center"><img width="800" height="" src="https://miro.medium.com/max/3200/1*rB-3Q2k7o9qk8IyAzx-TRA.gif"></p>
 

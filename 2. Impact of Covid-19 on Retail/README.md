@@ -1,4 +1,6 @@
 # Visualization of the Impact of Covid-19 on Canada's Retail Industries
+Covid-19 cases data in Canada was taken from [John Hopkins](https://github.com/RamiKrispin/coronavirus/tree/master/data) and retail sales by industry data was taken from [Stats Canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010001701).
+
 [Link to Tableau Public for interactive visualizations.](https://public.tableau.com/views/ImpactofCovid-19inRetailSalesbyIndustryinCanada/AlookintoCovid-19simpactonretailinCanada?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 <p align="center"><img width="600" height="" src="https://github.com/amyw0ng/Portfolio/blob/main/2.%20Impact%20of%20Covid-19%20on%20Retail/Tableau%20Sheets%20(Individual)/Intro.png"></p>

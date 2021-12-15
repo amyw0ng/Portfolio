@@ -1,6 +1,7 @@
 # Cluster Analysis of Customer Types and Spending Habits
 [Link to Data Source.](https://www.kaggle.com/imakash3011/customer-personality-analysis)
-<p>[Link to my Tableau Public for interactive visualizations.](https://public.tableau.com/views/CustomerPersonalityAnalysis_16363916330470/Story1?:language=en-US&:display_count=n&:origin=viz_share_link)</p>
+
+[Link to my Tableau Public for interactive visualizations.](https://public.tableau.com/views/CustomerPersonalityAnalysis_16363916330470/Story1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 <p align="center"><img width="600" height="" src=""></p>
 

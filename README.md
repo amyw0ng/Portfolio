@@ -4,7 +4,7 @@ Welcome to my portfolio repository, where you'll find some projects I've done, w
 Take a look around and enjoy your stay!
 
 ### Other Links
-- [Connect with me on Linkedin](www.linkedin.com/in/amy-yishan-wong)
+- [Connect with me on Linkedin](https://www.linkedin.com/in/amy-yishan-wong)
 - [Take a look at my Tableau Public](https://public.tableau.com/app/profile/amy.wong2810#!/)
 
 # Projects

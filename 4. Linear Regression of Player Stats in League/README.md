@@ -5,7 +5,7 @@ For this project, we're exploring the Group Stage data from the Worlds 2021 Leag
 
 **Hypothesis**: Our hypothesis is that team objectives play the biggest part in a team's success, which we will measure based on the team objective's contribution to the player stat that shows the most distinct difference between players that won or loss from our exploratory data analysis.
 
-<img width="600" height="" align="left" src="https://www.touchtapplay.com/wp-content/uploads/2021/07/league-of-legends-map.jpg">
+<p align="center"><img width="600" height="" src="https://www.touchtapplay.com/wp-content/uploads/2021/07/league-of-legends-map.jpg"></p>
 
 ```python
 # First, let's import all the necessary tools
@@ -205,7 +205,6 @@ WorldsData.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 24 columns</p>
 </div>
 
 
@@ -377,26 +376,15 @@ WorldsData.head()
 subset_Worlds = WorldsData.iloc[:,3:14]
 sns.pairplot(subset_Worlds, hue="Position")
 ```
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x1fc3fd92af0>
-
-
-
-
     
 ![png](README_files/README_6_1.png)
     
-
 
 Preliminary analysis shows how the support position stands out from the other roles. In particular, they fall short compared to other roles in Kills, Creep Score, Gold Earned and Champion Damage Share but are high in the Wards Placed department. This is namely due to the nature of the role, which doesn't require any "farming" during the "laning phase" of the game and relies more heavily on assisting the team during team fights or strategically placing wards in appropriate locations to provide the team with vision of the map and of the opposing team.
 
 ## Factors related to Wins or Losses based on Individual Player Stats
 
 ### Creep Score
-
 
 ```python
 # Plotting the distribution for Creep Score for players that won vs players that loss their matches
@@ -407,49 +395,17 @@ grid = sns.FacetGrid(WorldsData, col = "Position", hue = "Result", col_wrap=5)
 grid.map(sns.histplot,"Creep Score")
 grid.add_legend()
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc60aefaf0>
-
-
-
-
     
 ![png](README_files/README_9_1.png)
     
-
-
-
-    
 ![png](README_files/README_9_2.png)
     
-
-
-
 ```python
 # Since the difference isn't as apparent visually, let's look at the average creep score table below for comparison
 WorldsData[["Result", "Position", "Creep Score"]].groupby(["Result", "Position"]).mean()
 ```
 
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -511,29 +467,20 @@ WorldsData[["Result", "Position", "Creep Score"]].groupby(["Result", "Position"]
 </div>
 
 
-
-
 ```python
-# Ttest to compare the creep scores between players that won and those that loss
+# T-test to compare the creep scores between players that won and those that loss
 # Excluded Supports since they do not CS
 ttest_ind(WorldsData[(WorldsData["Result"] == "W") & (WorldsData["Position"] != "Support")]["Creep Score"],
           WorldsData[(WorldsData["Result"] == "L") & (WorldsData["Position"] != "Support")]["Creep Score"],
           alternative='two-sided')
 ```
-
-
-
-
     Ttest_indResult(statistic=2.22712091346054, pvalue=0.02722183115902894)
-
-
 
 We can see overall that the creep score is slightly higher for players that are winning for positions that are dependent on creep score (Mid, ADC, Jungle and Top). The position with the highest difference in average creep score between the winning and losing team was in Mid followed closely by Adc, then Jungle and lastly Top. We don't see much difference here for Supports since they're role does not rely on last hitting minions/jungle monsters. 
 
 In general our t-test indicates that creep score is a significant factor in determining whether a professional player will win or lose a match for the all positions except for Support.
 
 ### Gold Earned
-
 
 ```python
 # Plotting the distribution for Gold Earned for players that won vs players that loss their matches
@@ -545,26 +492,10 @@ grid.map(sns.histplot,"Gold Earned")
 grid.add_legend()
 ```
 
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc602a5760>
-
-
-
-
-    
 ![png](README_files/README_14_1.png)
-    
-
-
-
-    
+     
 ![png](README_files/README_14_2.png)
     
-
-
-
 ```python
 # Ttest to compare the gold earned between players that won and those that loss
 ttest_ind(WorldsData[WorldsData["Result"] == "W"]["Gold Earned"],
@@ -572,12 +503,7 @@ ttest_ind(WorldsData[WorldsData["Result"] == "W"]["Gold Earned"],
           alternative='two-sided')
 ```
 
-
-
-
     Ttest_indResult(statistic=5.6629794863189575, pvalue=4.664956492986764e-08)
-
-
 
 It's quite apparent that gold earned is a clear measure for how well a player is doing. This makes sense, considering gold is the currency earned on all objectives in the game - whether it's kills, assists, destroying enemy wards or towers, damaging enemy champions, or clearing team objectives like dragons.
 
@@ -593,27 +519,11 @@ grid = sns.FacetGrid(WorldsData, col = "Position", hue = "Result", col_wrap=5)
 grid.map(sns.histplot,"KDA")
 grid.add_legend()
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc6058a490>
-
-
-
-
     
 ![png](README_files/README_18_1.png)
-    
-
-
-
-    
+        
 ![png](README_files/README_18_2.png)
     
-
-
-
 ```python
 # Ttest to compare the gold earned between players that won and those that loss
 ttest_ind(WorldsData[WorldsData["Result"] == "W"]["KDA"],
@@ -621,12 +531,7 @@ ttest_ind(WorldsData[WorldsData["Result"] == "W"]["KDA"],
           alternative='two-sided')
 ```
 
-
-
-
     Ttest_indResult(statistic=15.18146889642989, pvalue=5.333364180576791e-36)
-
-
 
 KDA seems to show the most distinct difference between the winning and losing team, demonstrating that high kills and assists to deaths ratio is a significant indicator of a player's success in the game. Winning team fights or picking off enemy players swing the game drastically in the team's favor overall. With this we can see that surviving in the game and picking the right fights is very important. 
 
@@ -637,70 +542,33 @@ We'll use this category later on given it's significanct difference between play
 ### Heralds
 Interestingly enough, the Herald does not seem to have a significant impact on a team's success. The Herald, when used by the team that acquired it, will automatically target the closest enemy tower and deal significant damage to it while it's still alive. A lot of teams strategize using it while other team objectives like the Dragon is up as a means for distraction and splitting the enemy's focus. Given this strategy, it may be more likely that the better timing and use of the Herald has a greater impact as opposed to simply obtaining the objective.
 
-
 ```python
 sns.displot(WorldsData, x = "Herald For", hue = 'Result')
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc60628e20>
-
-
-
-
     
 ![png](README_files/README_22_1.png)
     
-
-
 ### Dragons
 Each Dragon acquired provides a permanent team buff. Not surprisingly, acquiring more Dragons (particularly four which leads to a team buff referred to as the "Soul"), leads to higher success in the game.  
-
 
 ```python
 sns.displot(WorldsData, x = "Dragons For", hue = 'Result')
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc604a2580>
-
-
-
-
     
 ![png](README_files/README_24_1.png)
     
-
-
 ### Barons
 We see the most distinct difference with the Baron, which gives a temporary team buff that also applies to the minions/creeps that are walking near team that acquires the buff. Teams that were able to obtain this objective were much more likely to win.
-
 
 ```python
 sns.displot(WorldsData, x = "Barons For", hue = 'Result')
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x1fc608b74f0>
-
-
-
-
     
 ![png](README_files/README_26_1.png)
     
-
-
 # Linear Regression Model for KDA
 
 Given the significant correlation between KDA and whether a player wins their match, I wanted to use a linear regression model to look at what factors had the most impact on KDA.
-
 
 ```python
 # First let's do a quick correlation analysis
@@ -717,25 +585,13 @@ cmap = sns.diverging_palette(20, 230, as_cmap=True)
 sns.heatmap(correlation, mask=mask, cmap=cmap, vmax=.3, center=0,
             square=True, linewidths=.5, cbar_kws={"shrink": .5}, annot=True)
 ```
-
-
-
-
-    <AxesSubplot:>
-
-
-
-
-    
+   
 ![png](README_files/README_28_1.png)
     
-
-
 We see that Kills, Deaths and Assists correlate with KDA. But given that KDA is calculated based on these values, for the purpose of the model I decided to leave these out. We can already see that team objectives like the Dragon and Baron seem to show some correlation with KDA.
 
 ## First Model
 Let's do a linear regression model analysis with all of the factors as a starting off point
-
 
 ```python
 # Constant was not used since it decreased the R-squared value by a large margin (was returning R-squared of 0.432)
@@ -743,7 +599,6 @@ Let's do a linear regression model analysis with all of the factors as a startin
 
 dependent_vars = WorldsData["KDA"]
 independent_vars = WorldsData[["Gold Earned", "Creep Score", "Champion Damage Share", "Kill Participation", "Wards Placed", "Wards Destroyed", "Ward Interactions", "Dragons For", "Barons For", "Herald For"]]
-
 
 dependent_vars = dependent_vars.apply(float)
 independent_vars = independent_vars.applymap(float)
@@ -800,7 +655,6 @@ We see in the model above that there are a few factors that can be removed due t
 ## Second Model
 Although our R-squared decreases a little, our P-values for each factor looks much better compared to before after dropping those factors.
 
-
 ```python
 # We run the model a second time with the above factors removed
 independent_vars2 = independent_vars[["Creep Score", "Kill Participation", "Ward Interactions", "Dragons For", "Barons For", "Herald For"]]
@@ -846,7 +700,6 @@ print(reg_results2.summary())
     [3] The condition number is large, 1.02e+03. This might indicate that there are
     strong multicollinearity or other numerical problems.
     
-
 # Conclusions
 From this we can see that overall team objectives seem to play a big role in increasing a player's KDA. Surprisingly, obtaining Heralds also still contribute to high KDA despite the lack of significant difference between winning and losing teams. Overall, this is consistent with current team strategies that heavily revolves around team fights that break out in order to obtain these team objectives. As a result, those that win the fight not only have higher KDAs but also are able to obtain the objectives. This also makes sense considering that high kill participation also plays a big part in KDA.
 

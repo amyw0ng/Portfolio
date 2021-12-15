@@ -7,8 +7,6 @@ For this project, we're exploring the Group Stage data from the Worlds 2021 Leag
 
 <img width="600" height="" align="left" src="https://www.touchtapplay.com/wp-content/uploads/2021/07/league-of-legends-map.jpg">
 
-
-
 ```python
 # First, let's import all the necessary tools
 import numpy as np
@@ -51,30 +49,12 @@ The dataset was combined in Excel and shows the player's individual game stats p
 - **Herald For** - Total number of Heralds player's team acquired in that match
 - **Herald Against** - Total number of Heralds opposing team acquired in that match
 
-
 ```python
 # Let's load in our data
 WorldsData = pd.read_excel('League_PlayIn_Data.xlsx', 'PlayInGroupsData')
 WorldsData.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -229,8 +209,6 @@ WorldsData.head()
 </div>
 
 
-
-
 ```python
 # Let's drop some of the redundant columns or data we don't need
 WorldsData.drop(columns = ['Team', 'Opponent', 'Barons Against', 'Dragons Against', 'Herald Against'], inplace = True)
@@ -244,23 +222,6 @@ WorldsData['KDA'] = np.where(
 WorldsData.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -408,9 +369,7 @@ WorldsData.head()
 </div>
 
 
-
 # Exploratory Data Analysis
-
 
 ```python
 # Let's take a preliminary look at some of the player's individual stats split based on their position in the game

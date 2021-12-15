@@ -6,7 +6,7 @@
 ## History of Sales Patterns in Canada in the Last 10 Years
 Retail sales show an overall growth over the last 10 years but also exhibits seasonal patterns. For example, sales tend to drop in January and rise in the Spring before shooting up dramatically during the Winter which corresponds with the Christmas holidays being a big season for spending overall. The blue area highlighted represents when Covid-19 surfaced in Canada and we can see a very clear dip in sales in April when the first Covid-19 wave was at it's peak.
 
-<p align="center"><img width="600" height="" src="https://github.com/amyw0ng/Portfolio/blob/main/2.%20Impact%20of%20Covid-19%20on%20Retail/Tableau%20Sheets%20(Individual)/Intro.png?raw=true"></p>
+<p align="center"><img width="600" height="" src="https://github.com/amyw0ng/Portfolio/blob/main/2.%20Impact%20of%20Covid-19%20on%20Retail/Tableau%20Sheets%20(Individual)/History%20of%20Retail.png?raw=true"></p>
 
 ## Relationship between Covid-19 Cases and Retail Sales
 When looking more closely at the rise and fall of Covid-19 cases in Canada, we see that the largest impact of Covid-19 on retail sales was most apparent during the first wave. Interestingly enough, sales overall recovered quite well in the second and third wave (when we take into consideration the seasonal patterns as described before for the wave that occurred during the Christmas season). 

@@ -744,6 +744,10 @@ Based on our models, we do see that there are some differences in which factors 
 
 It's important to note that this is a dataset collected in 1988 with quite a small sample size and has high variance as seen in our feature importance figure above. It would be beneficially to apply this model to a larger dataset that is more recent to see if this still holds true by current health standards.
 
+[Link to interactive visuals on Tableau Public](https://public.tableau.com/views/HeartDisease_Classification/HeartDiseaseOverview?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
+<div class='tableauPlaceholder' id='viz1639004022661' style='position: relative'><noscript><a href='#'><img alt='Heart Disease Overview ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;HeartDisease_Classification&#47;HeartDiseaseOverview&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='HeartDisease_Classification&#47;HeartDiseaseOverview' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;HeartDisease_Classification&#47;HeartDiseaseOverview&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>     
+
 # Extra Notes
 
 ```python

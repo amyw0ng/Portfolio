@@ -6,7 +6,7 @@ Heart disease refers to several different heart conditions, such as coronary hea
 
 Preventative measures is often the best cure and understanding the signs of at-risk patients can be very helpful for the prognosis. 
 
-Heart disease generally presents itself quite differently in men and women. One of the major challenges for diagnosing women with heart disease is the lack of recognition of symptoms related to heart disease, or that they don't fit the classic definitions due to more data available for heart disease in men compared to women. Often times women can develop symptoms that are subtler and harder to detect as a heart attack.
+Heart disease generally presents itself quite differently in men and women. In addition, one of the major challenges for diagnosing women with heart disease is the lack of recognition of symptoms related to heart disease more common to women or that their symptoms don't fit the classic definitions of heart disease that is largely based on data from men. Often times women can develop symptoms that are subtler and harder to detect as a heart attack.
 
 **Main Goal:**
 Using this dataset of patient information for common factors related to heart disease, we are building a model to evaluate what are the most important factors for diagnosing heart disease in men and women to illustrate how they differ based on gender. 

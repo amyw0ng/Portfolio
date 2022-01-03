@@ -14,7 +14,7 @@ For our investigation we were provided with:
 
 ## 30-Day Rolling Retention
 
-First off, we defined retention based on whether or not a player played a game 30 days after joining the game. We wanted to explore the 30-day rolling retention for the past year and see what our percent retention was for each day and whether or not we've seen any growth throughout the year.
+First off, we defined retention based on whether or not a player played a game 30 days after joining the game. We wanted to explore the 30-day rolling retention for the past year and see what our percent retention was for each day and whether or not we've seen any growth in our retention.
 
 ### To determine the above, the following steps were taken:
 
